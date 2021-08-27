@@ -12,7 +12,275 @@
     <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+<style>*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+:root{
+    --navbar-height: 59px;
+}
+
+#navbar{
+    display: flex;
+    position: sticky;
+    align-items: center;
+  top: 0px;
+}
+.logo{
+    margin: 10px 34px;
+}
+.logo img{
+    margin: 3px 6px;
+    border-radius: 100px;   
+}
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity:0.5  ;
+    top: 0px;
+    left: 0px;
+
+}
+#navbar ul{
+    display: flex;
+    font-family: 'Shadows Into Light', cursive;
+    background-color: white;
+    border-radius: 30px;
+}
+#navbar form{
+    display: flex;
+  
+    font-family: 'Shadows Into Light', cursive;
+    background-color: black;
+    border-radius: 30px;
+    padding:4px;
+    color: black;
+    margin:4px;
+}
+
+
+#navbar ul li{
+    
+   list-style: none;
+   font-size: 1.3rem;
+    
+}
+#navbar ul label{
+    
+   list-style-type: none;
+   font-size: 1.3rem;
+   color:black;
+   display: inline;
+   padding: 3px 22px;
+   border-radius: 20px;
+   text-decoration:none;   
+}
+#navbar ul label:hover{
+    
+    color: white;   
+    background-color:black;
+    
+}
+#navbar ul input:hover{
+    color: blue;   
+    background-color:white;
+}
+#navbar ul BUTTON:hover{
+    color: blue;   
+    background-color:white;
+}
+#navbar ul li a{
+    color:black;
+    display: inline;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration:none;
+}
+#navbar ul a:hover{
+    color: white;
+    background-color: black;
+    border-radius: 14px ;
+}
+#navbar ul li a:hover{
+ color: white;   
+ background-color: black;
+}
+
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    height: 490px; 
+}
+#home::before{
+    content: "";
+    background: url('../a12.jpeg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+}
+#home h1{
+    color:black;
+    text-align: center;
+    font-family: cursive;
+}
+#home p{
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree serif',serif;
+    opacity: 1;
+}
+#services{
+    margin: 34px;
+    display: flex;
+}
+
+#services .box{
+    border: 2px solid black;
+border: 2px solid black;
+border-radius: 23px;
+margin: 3px 4px;
+padding: 4px;
+width:auto;
+height: auto;
+background-color: white;
+}
+#services .box img {
+    height: 200px;
+    width: 200px;
+    display:block;
+    margin: auto;
+    border-radius: 100px;
+}
+#services .box p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.sale{
+    margin:34px;
+    display: flex; 
+}
+.sale .box{
+    border: 2px solid black;
+
+border-radius: 23px;
+margin: 3px 4px;
+padding: 4px;
+width:auto;
+height: auto;
+background-color: white;
+
+}
+.sale .box img {
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin: auto;
+    border-radius: 100px;
+}
+.sale .box p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+#client-section{
+    height: 180px;
+    position: relative;
+}
+#client-section::before{
+content: "";
+position: absolute;
+background:url('../AA.jpg');
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.6;
+}
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+   height: 70px;
+   border-radius: 100px;
+}
+#contact{
+    position:relative;
+}
+#contact::before{
+    content: "";
+position:absolute;
+background:url('../c.webp') no-repeat center center/cover;
+width: 100%;
+height: 100%;
+z-index: -1;
+opacity: 0.9;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+    
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size:0.8rem ;
+}
+#contact-box form{
+    font-family: cursive;
+    font-size: 1rem;
+}
+footer{
+    background:black;
+    color: white;
+    padding: 9px 20px;
+}
+
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: cursive;
+}
+.h-secondary{
+font-size: 2.8rem;
+padding: 12px;
+font-family: cursive;
+font-size:2.3rem;
+}
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+ border-color: white;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+    }</style>
+    </head>
 
 <body>
     <nav id="navbar">
